@@ -47,3 +47,5 @@ order by titulo
 select cod_livro, titulo, categoria from livro
 order by titulo desc
 
+SELECT * FROM usuario AS u JOIN livro AS l
+ON u.id_livro = l.id_livro;
