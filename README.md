@@ -4,6 +4,10 @@
 
 ---
 
+## Exemplo de MODELAGEM
+
+<img src="https://user-images.githubusercontent.com/114539889/211698573-1b7e5ebc-519d-467a-9662-9af1814e9061.png" alt="drawing" width="400"/>
+
 ## Exemplo de CREATE DATABASE
 
 ```sql
