@@ -2,6 +2,14 @@
 
 Projeto da disciplina de Banco de Dados.
 
+Modelagem
+Criação do banco utilizando um SGDB
+Querys
+Select (faça um simples e um outro usando join)
+Insert
+Update
+Delete
+
 ## Exemplo de SELECT
 
 ```sql
