@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS livro (
   id_livro INT NOT NULL UNIQUE,
-  cod_livro INT NOT NULL,
+  cod_livro INT NOT NULL UNIQUE,
   titulo VARCHAR(50) NOT NULL,
   autor VARCHAR(50) NOT NULL,
   categoria VARCHAR(10),
@@ -30,22 +30,3 @@ INSERT INTO usuario (id_usuario, matricula, cpf, nome, endereco, telefone, id_li
   ('12345', '2023201', '0230876578', 'Pedro Gustavo', 'Rua das Esmeraldas, 12', '988759900', '0001'),
   ('12346', '2023202', '0230876579', 'Julia Silva', 'Rua Carlos Chagas, 75', '988750087', '0003'),
   ('12347', '2023203', '0230876579', 'Clarissa Pereira', 'Rua Dalila Silva, 80', '988751514', '0002');
-
-select * from livro
-
-select id_livro, titulo from livro 
-
-select id_livro, titulo from livro
-where categoria = 'Ficção'
-
-select id_livro, titulo from livro
-where titulo like '%principe%'
-
-select cod_livro, titulo, categoria from livro
-order by titulo
-
-select cod_livro, titulo, categoria from livro
-order by titulo desc
-
-SELECT * FROM usuario AS u JOIN livro AS l
-ON u.id_livro = l.id_livro;
