@@ -9,11 +9,6 @@ CREATE TABLE IF NOT EXISTS livro (
   PRIMARY KEY (id_livro)
 );
 
-INSERT INTO livro (id_livro, cod_livro, titulo, autor, categoria, qtd_paginas, localizacao) VALUES
-  ('00001', '00100', 'O pequeno Principe', 'Antoine de Saint-exupery', 'infantil', '96', 'E01P05'),
-  ('00002', '00101', 'A ilha das árvores perdidas', 'Elif Shafak', 'Ficção', '352', 'E04P02'),
-  ('00003', '00102', 'Dom Quixote', 'Miguel de Cervantes Saavedra', 'Ficção', '304', 'E04P05');
-
 CREATE TABLE IF NOT EXISTS usuario (
   id_usuario INT NOT NULL,
   matricula INT NOT NULL,
@@ -25,6 +20,11 @@ CREATE TABLE IF NOT EXISTS usuario (
   PRIMARY KEY (id_usuario,cpf),
   FOREIGN KEY (id_livro) REFERENCES livro(id_livro)
 );
+INSERT INTO livro (id_livro, cod_livro, titulo, autor, categoria, qtd_paginas, localizacao) VALUES
+  ('00001', '00100', 'O pequeno Principe', 'Antoine de Saint-exupery', 'infantil', '96', 'E01P05'),
+  ('00002', '00101', 'A ilha das árvores perdidas', 'Elif Shafak', 'Ficção', '352', 'E04P02'),
+  ('00003', '00102', 'Dom Quixote', 'Miguel de Cervantes Saavedra', 'Ficção', '304', 'E04P05');
+
 
 INSERT INTO usuario (id_usuario, matricula, cpf, nome, endereco, telefone, id_livro) VALUES
   ('12345', '2023201', '0230876578', 'Pedro Gustavo', 'Rua das Esmeraldas, 12', '988759900', '0001'),
